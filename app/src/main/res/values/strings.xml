@@ -16,4 +16,13 @@
     <string name="user_password_input">******</string>
     <string name="privacy_policy_button">Політика конфіденціальності</string>
     <string name="next_button">Далі</string>
+    <string name="login_title">Вхід</string>
+    <string name="login_user_email_text">Ваш email</string>
+    <string name="login_user_password_text">Пароль</string>
+    <string name="forgot_password_button">Забули пароль?</string>
+    <string name="registration_button">Реєстрація</string>
+    <string name="enter_the_email_input">Введіть Ваш email…</string>
+    <string name="enter_the_password_input">Введіть Ваш пароль…</string>
+    <string name="entrance_button">Вхід</string>
+    <string name="entrance_dia_button">Вхід через Дія</string>
 </resources>
