@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:contentDescription="@string/logo_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_dark"
+        android:layout_marginTop="40dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sign_in_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:scrollbars="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/question_sign_in"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <TextView
+        android:id="@+id/question_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/sign_in_question"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/enter_the_id_placeholder"
+        app:layout_constraintStart_toStartOf="@+id/enter_the_id_placeholder" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/enter_the_id_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/enter_the_id_placeholder"
+        app:layout_constraintBottom_toTopOf="@id/to_start_button"
+        app:layout_constraintEnd_toEndOf="@id/to_start_button"
+        app:layout_constraintStart_toStartOf="@id/to_start_button">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enter_the_id_placeholder_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/to_start_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/to_start_button"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/have_an_acc_button"
+        app:layout_constraintEnd_toEndOf="@id/have_an_acc_button"
+        app:layout_constraintStart_toStartOf="@id/have_an_acc_button" />
+
+    <Button
+        android:id="@+id/have_an_acc_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/have_acc_button"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

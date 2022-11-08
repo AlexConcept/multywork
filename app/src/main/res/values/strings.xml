@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">OffZmi</string>
+    <string name="sign_in_question">Чи маєте ви ID запрошення?</string>
+    <string name="to_start_button">Розпочати</string>
+    <string name="logo_description">Off zmi</string>
+    <string name="have_acc_button">В мене вже є аккаунт</string>
+    <string name="enter_the_id_placeholder">Введіть ID ******</string>
+    <string name="registration_title">Реєстрація</string>
+    <string name="user_name_text">Введіть прізвище, ім\'я по-батькові*</string>
+    <string name="user_name_input">Іванов Іван Іванович</string>
+    <string name="phone_number">Номер телефону*</string>
+    <string name="phone_number_example">+380671234567</string>
+    <string name="email_text">Електронна пошта*</string>
+    <string name="user_email_input">name@gmail.com</string>
+    <string name="password_text">Пароль*</string>
+    <string name="user_password_input">******</string>
+    <string name="privacy_policy_button">Політика конфіденціальності</string>
+    <string name="next_button">Далі</string>
+</resources>
