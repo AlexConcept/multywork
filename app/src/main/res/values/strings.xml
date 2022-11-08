@@ -6,18 +6,17 @@
     <string name="have_acc_button">В мене вже є аккаунт</string>
     <string name="enter_the_id_placeholder">Введіть ID ******</string>
     <string name="registration_title">Реєстрація</string>
-    <string name="user_name_text">Введіть прізвище, ім\'я по-батькові*</string>
+    <string name="user_name_text">Введіть прізвище, ім\'я по-батькові</string>
     <string name="user_name_input">Іванов Іван Іванович</string>
-    <string name="phone_number">Номер телефону*</string>
+    <string name="phone_number">Номер телефону</string>
     <string name="phone_number_example">+380671234567</string>
-    <string name="email_text">Електронна пошта*</string>
+    <string name="email_text">Електронна пошта</string>
     <string name="user_email_input">name@gmail.com</string>
-    <string name="password_text">Пароль*</string>
+    <string name="password_text">Пароль</string>
     <string name="user_password_input">******</string>
     <string name="privacy_policy_button">Політика конфіденціальності</string>
     <string name="next_button">Далі</string>
     <string name="login_title">Вхід</string>
-    <string name="login_user_email_text">Ваш email</string>
     <string name="login_user_password_text">Пароль</string>
     <string name="forgot_password_button">Забули пароль?</string>
     <string name="registration_button">Реєстрація</string>
@@ -25,4 +24,8 @@
     <string name="enter_the_password_input">Введіть Ваш пароль…</string>
     <string name="entrance_button">Вхід</string>
     <string name="entrance_dia_button">Вхід через Дія</string>
+    <string name="pass_reset">Скидання пароля</string>
+    <string name="pass_reset_instructions">Введіть ваш email і ми відправимо вам інструкції як скинути ваш пароль.</string>
+    <string name="confirm">Підтвердити</string>
+    <string name="cancel">Відмінити</string>
 </resources>
