@@ -28,4 +28,12 @@
     <string name="pass_reset_instructions">Введіть ваш email і ми відправимо вам інструкції як скинути ваш пароль.</string>
     <string name="confirm">Підтвердити</string>
     <string name="cancel">Відмінити</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_label_publishes">Публікації</string>
+    <string name="text_label_request">Запрос</string>
+    <string name="text_label_add">Додати</string>
+    <string name="text_label_profile">Профіль</string>
+    <string name="text_label_info">Інфо</string>
+
+
 </resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_nav_publishesFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_notes_24"
+        android:title="@string/text_label_publishes" />
+    <item
+        android:id="@+id/bottom_nav_requestFragment2"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_people_outline_24"
+        android:title="@string/text_label_request" />
+    <item
+        android:id="@+id/bottom_nav_addFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_add_circle_outline_24"
+        android:title="@string/text_label_add" />
+    <item
+        android:id="@+id/bottom_nav_profileFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="@string/text_label_profile" />
+    <item
+        android:id="@+id/bottom_nav_infoFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_info_24"
+        android:title="@string/text_label_info" />
+</menu>
