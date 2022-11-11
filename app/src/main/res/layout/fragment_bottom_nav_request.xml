@@ -1,14 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".bottom_nav_requestFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:padding="16dp">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/request_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/request_title"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/request_instructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/request_instructions"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/request_title" />
+
+        <ImageView
+            android:id="@+id/QR"
+            android:layout_width="246dp"
+            android:layout_height="336dp"
+            android:contentDescription="@string/qr_code_description"
+            android:src="@drawable/qr_code"
+            app:layout_constraintEnd_toEndOf="@id/request_instructions"
+            app:layout_constraintStart_toStartOf="@id/request_instructions"
+            app:layout_constraintTop_toBottomOf="@id/request_instructions"
+            tools:layout_editor_absoluteX="78dp"
+            tools:layout_editor_absoluteY="154dp" />
+
+        <Button
+            android:id="@+id/share_link_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/copy_to_buffer"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@id/QR"
+            app:layout_constraintStart_toStartOf="@id/QR"
+            app:layout_constraintTop_toBottomOf="@id/QR" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

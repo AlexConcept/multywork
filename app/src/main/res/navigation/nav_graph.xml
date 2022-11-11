@@ -8,26 +8,26 @@
     <fragment
         android:id="@+id/bottom_nav_publishesFragment"
         android:name="com.example.offzmi.bottom_nav_publishesFragment"
-        android:label="fragment_bottom_nav_publishes"
+        android:label="@string/text_label_publishes"
         tools:layout="@layout/fragment_bottom_nav_publishes" />
     <fragment
         android:id="@+id/bottom_nav_addFragment"
         android:name="com.example.offzmi.bottom_nav_addFragment"
-        android:label="fragment_bottom_nav_add"
+        android:label="@string/label_add"
         tools:layout="@layout/fragment_bottom_nav_add" />
     <fragment
         android:id="@+id/bottom_nav_profileFragment"
         android:name="com.example.offzmi.bottom_nav_profileFragment"
-        android:label="fragment_bottom_nav_profile"
+        android:label="@string/text_label_profile"
         tools:layout="@layout/fragment_bottom_nav_profile" />
     <fragment
-        android:id="@+id/bottom_nav_requestFragment2"
+        android:id="@+id/bottom_nav_requestFragment"
         android:name="com.example.offzmi.bottom_nav_requestFragment"
-        android:label="fragment_bottom_nav_request2"
-        tools:layout="@layout/fragment_bottom_nav_request2" />
+        android:label="@string/label_request"
+        tools:layout="@layout/fragment_bottom_nav_request" />
     <fragment
         android:id="@+id/bottom_nav_infoFragment"
         android:name="com.example.offzmi.bottom_nav_infoFragment"
-        android:label="fragment_bottom_nav_info"
+        android:label="@string/text_label_info"
         tools:layout="@layout/fragment_bottom_nav_info" />
 </navigation>

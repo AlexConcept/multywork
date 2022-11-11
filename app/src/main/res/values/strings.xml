@@ -31,9 +31,24 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text_label_publishes">Публікації</string>
     <string name="text_label_request">Запрос</string>
+    <string name="label_request">Запросити друга</string>
     <string name="text_label_add">Додати</string>
+    <string name="label_add">Додати новину</string>
     <string name="text_label_profile">Профіль</string>
     <string name="text_label_info">Інфо</string>
-
-
+    <string name="request_title">Як це працює?</string>
+    <string name="request_instructions">Надішліть посилання другу або відскануйте QR код</string>
+    <string name="add_news_title">Додати новину</string>
+    <string name="news_name">Назва новини</string>
+    <string name="news_name_hint">Введіть назву новини</string>
+    <string name="news_text_hint">Введіть опис новини</string>
+    <string name="news_date">Дата та час</string>
+    <string name="date_time_hint">Додайте дату та час</string>
+    <string name="add_image_cover_text">Додайте фото обкладинки</string>
+    <string name="choose_category_text">Виберіть категорію</string>
+    <string name="news_text">Новина</string>
+    <string name="qr_code_description">QR code</string>
+    <string name="copy_to_buffer">Cкопіювати посилання в буфер обміну</string>
+    <string name="choose_photo">Вибрати фото</string>
+    <string name="show_сategory_menu">Показати категорії</string>
 </resources>

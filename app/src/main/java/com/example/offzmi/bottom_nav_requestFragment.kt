@@ -19,7 +19,7 @@ class bottom_nav_requestFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_bottom_nav_request2, container, false)
+        return inflater.inflate(R.layout.fragment_bottom_nav_request, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

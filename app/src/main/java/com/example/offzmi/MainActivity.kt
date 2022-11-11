@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         val appBarConfiguration = AppBarConfiguration(setOf(
             R.id.bottom_nav_publishesFragment,
-            R.id.bottom_nav_requestFragment2,
+            R.id.bottom_nav_requestFragment,
             R.id.bottom_nav_addFragment,
             R.id.bottom_nav_profileFragment,
             R.id.bottom_nav_infoFragment
