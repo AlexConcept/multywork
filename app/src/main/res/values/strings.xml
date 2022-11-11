@@ -51,4 +51,6 @@
     <string name="copy_to_buffer">Cкопіювати посилання в буфер обміну</string>
     <string name="choose_photo">Вибрати фото</string>
     <string name="show_сategory_menu">Показати категорії</string>
+    <string name="FAQ">FAQ</string>
+    <string name="write_to_us">Написати нам</string>
 </resources>
