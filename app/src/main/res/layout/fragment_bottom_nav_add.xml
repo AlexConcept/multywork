@@ -107,6 +107,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            app:icon="@drawable/ic_baseline_photo_library_24"
             android:text="@string/choose_photo"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
@@ -131,6 +132,7 @@
             android:layout_marginTop="30dp"
             android:text="@string/show_сategory_menu"
             android:textAllCaps="false"
+            app:icon="@drawable/ic_baseline_format_list_bulleted_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/choose_category" />
@@ -140,6 +142,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            app:icon="@drawable/ic_baseline_navigate_next_24"
             android:text="@string/next_button"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"

@@ -53,4 +53,14 @@
     <string name="show_сategory_menu">Показати категорії</string>
     <string name="FAQ">FAQ</string>
     <string name="write_to_us">Написати нам</string>
+    <string name="edit_profile">Редагувати профіль</string>
+    <string name="my_cabinet">Мій кабінет</string>
+    <string name="likes">Лайки</string>
+    <string name="direct">Повідомлення</string>
+    <string name="my_posts">Мої публікації</string>
+    <string name="saved_posts">Збереженні публікації</string>
+    <string name="go_to_the_site">Перейти на сайт додатку</string>
+    <string name="content">Контент</string>
+    <string name="choose_category_description">Choose category</string>
+    <string name="fab_category">Виберіть категорію новин</string>
 </resources>

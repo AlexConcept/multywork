@@ -50,6 +50,7 @@
             android:id="@+id/share_link_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            app:icon="@drawable/ic_baseline_content_copy_24"
             android:text="@string/copy_to_buffer"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="@id/QR"

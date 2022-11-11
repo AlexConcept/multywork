@@ -1,13 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".bottom_nav_profileFragment">
+    android:layout_height="match_parent">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="wrap_content"
+        android:padding="16dp">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="User Name" />
+
+        <Button
+            android:id="@+id/edit_profile_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="70dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/edit_profile"
+            android:textAllCaps="false"
+            app:icon="@drawable/ic_baseline_co_present_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_name" />
+
+        <TextView
+            android:id="@+id/my_cabinet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="20dp"
+            android:text="@string/my_cabinet"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_profile_button" />
+
+        <Button
+            android:id="@+id/likes_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/likes"
+            android:textAllCaps="false"
+            app:icon="@drawable/ic_baseline_thumb_up_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/my_cabinet" />
+
+        <Button
+            android:id="@+id/direct_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/direct"
+            android:textAllCaps="false"
+            app:icon="@drawable/ic_baseline_chat_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/likes_button" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="20dp"
+            android:text="@string/content"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/direct_button" />
+
+        <Button
+            android:id="@+id/my_posts_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/my_posts"
+            android:textAllCaps="false"
+            app:icon="@drawable/ic_baseline_text_snippet_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/content" />
+
+        <Button
+            android:id="@+id/saved_posts_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/saved_posts"
+            android:textAllCaps="false"
+            app:icon="@drawable/ic_baseline_bookmark_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/my_posts_button" />
+
+        <Button
+            android:id="@+id/go_to_site_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/go_to_the_site"
+            android:textAllCaps="false"
+            app:icon="@drawable/ic_baseline_web_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/saved_posts_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
