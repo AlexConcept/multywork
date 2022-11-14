@@ -30,4 +30,24 @@
         android:name="com.example.offzmi.bottom_nav_infoFragment"
         android:label="@string/text_label_info"
         tools:layout="@layout/fragment_bottom_nav_info" />
+    <fragment
+        android:id="@+id/sign_inFragment"
+        android:name="com.example.offzmi.sign_inFragment"
+        android:label="sign_inFragment"
+        tools:layout="@layout/fragment_sign_in"/>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.offzmi.registrationFragment"
+        android:label="registrationFragment"
+        tools:layout="@layout/fragment_registration"/>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.offzmi.loginFragment"
+        android:label="loginFragment"
+        tools:layout="@layout/fragment_login"/>
+    <fragment
+        android:id="@+id/password_resetFragment"
+        android:name="com.example.offzmi.password_resetFragment"
+        android:label="password_resetFragment"
+        tools:layout="@layout/fragment_password_reset"/>
 </navigation>

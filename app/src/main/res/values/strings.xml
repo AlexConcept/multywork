@@ -63,4 +63,13 @@
     <string name="content">Контент</string>
     <string name="choose_category_description">Choose category</string>
     <string name="fab_category">Виберіть категорію новин</string>
+    <string name="messages">Повідомлення</string>
+    <string name="notifications">Оповіщення</string>
+    <string name="choose_city">Оберіть місто для модерації новини</string>
+    <string name="enter_the_street">Введіть назву вулиці</string>
+    <string name="street_name">Назва вулиці</string>
+    <string name="home_number">Номер будинку</string>
+    <string name="enter_the_home_number">Введіть номер будинку</string>
+    <string name="publish">Опублікувати</string>
+    <string name="add_photo">Додайте фото події</string>
 </resources>
