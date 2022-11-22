@@ -26,8 +26,8 @@
         android:label="@string/label_request"
         tools:layout="@layout/fragment_bottom_nav_request" />
     <fragment
-        android:id="@+id/bottom_nav_infoFragment"
-        android:name="com.example.offzmi.bottom_nav_infoFragment"
+        android:id="@+id/InfoFragment"
+        android:name="com.example.offzmi.InfoFragment"
         android:label="@string/text_label_info"
         tools:layout="@layout/fragment_bottom_nav_info" />
     <fragment

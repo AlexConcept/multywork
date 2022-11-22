@@ -1,8 +1,14 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".InfoFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="16dp">
+
 
     <Button
         android:id="@+id/faq_button"
@@ -26,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@id/faq_button" />
 
     <Button
-        android:id="@+id/privacy_policy_faq"
+        android:id="@+id/privacy_policy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
@@ -38,4 +44,4 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
+</layout>

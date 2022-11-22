@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.bottom_nav_requestFragment,
                 R.id.bottom_nav_addFragment,
                 R.id.bottom_nav_profileFragment,
-                R.id.bottom_nav_infoFragment
+                R.id.InfoFragment
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
