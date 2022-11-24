@@ -1,4 +1,4 @@
-package com.example.offzmi
+package com.example.offzmi.viewmodel
 
 import androidx.lifecycle.ViewModel
 

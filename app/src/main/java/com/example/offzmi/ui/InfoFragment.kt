@@ -1,21 +1,18 @@
-package com.example.offzmi
+package com.example.offzmi.ui
 
-import android.content.Intent
-import android.net.Uri
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import com.example.offzmi.R
 import com.example.offzmi.databinding.FragmentBottomNavInfoBinding
+import com.example.offzmi.utils.Utils.openWebPage
+import com.example.offzmi.viewmodel.BottomNavInfoViewModel
 
 
-class InfoFragment : Fragment(), View.OnClickListener {
-
-    companion object{
-        const val website = "https:/www.offzmi.com"
-    }
+class InfoFragment : Fragment() {
 
     private lateinit var viewModel: BottomNavInfoViewModel
     private var _binding: FragmentBottomNavInfoBinding? = null
@@ -34,21 +31,19 @@ class InfoFragment : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.faqButton.setOnClickListener(this)
-        binding.writeToUs.setOnClickListener(this)
-        binding.privacyPolicy.setOnClickListener(this)
+        binding.faqButton.setOnClickListener {
+            openWebPage(
+                resources.getString(R.string.base_url),
+                requireContext()
+            )
+        }
+        binding.privacyPolicy.setOnClickListener {
+            openWebPage(
+                resources.getString(R.string.privacy_policy_url),
+                requireContext()
+            )
+        }
     }
-
-    override fun onClick(v: View?) {
-        openWebPage(website)
-    }
-
-    fun openWebPage(url: String) {
-        val webpage: Uri = Uri.parse(url)
-        val intent = Intent(Intent.ACTION_VIEW, webpage)
-        startActivity(intent)
-    }
-
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)

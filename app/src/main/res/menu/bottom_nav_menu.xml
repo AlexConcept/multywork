@@ -11,12 +11,12 @@
         android:icon="@drawable/ic_baseline_people_outline_24"
         android:title="@string/text_label_request" />
     <item
-        android:id="@+id/bottom_nav_addFragment"
+        android:id="@+id/AddFragment"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_add_circle_outline_24"
         android:title="@string/text_label_add" />
     <item
-        android:id="@+id/bottom_nav_profileFragment"
+        android:id="@+id/ProfileFragment"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_account_circle_24"
         android:title="@string/text_label_profile" />

@@ -1,7 +1,7 @@
-package com.example.offzmi
+package com.example.offzmi.viewmodel
 
 import androidx.lifecycle.ViewModel
 
-class Add3ViewModel : ViewModel() {
+class Add2ViewModel : ViewModel() {
     // TODO: Implement the ViewModel
 }

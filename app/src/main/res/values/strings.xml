@@ -72,4 +72,7 @@
     <string name="enter_the_home_number">Введіть номер будинку</string>
     <string name="publish">Опублікувати</string>
     <string name="add_photo">Додайте фото події</string>
+    <string name="base_url">https:/www.offzmi.com</string>
+    <string name="privacy_policy_url">https://offzmi.com/politika-konfidenciynosti.html</string>
+    <string name="welcome">Ласкаво просимо до OFFЗМІ</string>
 </resources>

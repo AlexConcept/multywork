@@ -3,51 +3,59 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/bottom_nav_publishesFragment">
+    app:startDestination="@id/SignInFragment">
 
     <fragment
-        android:id="@+id/bottom_nav_publishesFragment"
-        android:name="com.example.offzmi.bottom_nav_publishesFragment"
+        android:id="@+id/PublicationsFragment"
+        android:name="com.example.offzmi.ui.PublicationsFragment"
         android:label="@string/text_label_publishes"
         tools:layout="@layout/fragment_bottom_nav_publishes" />
     <fragment
-        android:id="@+id/bottom_nav_addFragment"
-        android:name="com.example.offzmi.bottom_nav_addFragment"
+        android:id="@+id/AddFragment"
+        android:name="com.example.offzmi.ui.AddFragment"
         android:label="@string/label_add"
         tools:layout="@layout/fragment_bottom_nav_add" />
     <fragment
-        android:id="@+id/bottom_nav_profileFragment"
-        android:name="com.example.offzmi.bottom_nav_profileFragment"
+        android:id="@+id/ProfileFragment"
+        android:name="com.example.offzmi.ui.ProfileFragment"
         android:label="@string/text_label_profile"
         tools:layout="@layout/fragment_bottom_nav_profile" />
     <fragment
-        android:id="@+id/bottom_nav_requestFragment"
-        android:name="com.example.offzmi.bottom_nav_requestFragment"
+        android:id="@+id/RequestFragment"
+        android:name="com.example.offzmi.ui.RequestFragment"
         android:label="@string/label_request"
         tools:layout="@layout/fragment_bottom_nav_request" />
     <fragment
         android:id="@+id/InfoFragment"
-        android:name="com.example.offzmi.InfoFragment"
+        android:name="com.example.offzmi.ui.InfoFragment"
         android:label="@string/text_label_info"
         tools:layout="@layout/fragment_bottom_nav_info" />
     <fragment
-        android:id="@+id/sign_inFragment"
-        android:name="com.example.offzmi.sign_inFragment"
-        android:label="sign_inFragment"
+        android:id="@+id/SignInFragment"
+        android:name="com.example.offzmi.ui.SignInFragment"
+        android:label="@string/welcome"
         tools:layout="@layout/fragment_sign_in"/>
     <fragment
-        android:id="@+id/registrationFragment"
-        android:name="com.example.offzmi.registrationFragment"
-        android:label="registrationFragment"
+        android:id="@+id/RegistrationFragment"
+        android:name="com.example.offzmi.ui.RegistrationFragment"
+        android:label="@string/registration_title"
         tools:layout="@layout/fragment_registration"/>
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.offzmi.loginFragment"
-        android:label="loginFragment"
+        android:id="@+id/LoginFragment"
+        android:name="com.example.offzmi.ui.LoginFragment"
+        android:label="@string/login_title"
         tools:layout="@layout/fragment_login"/>
     <fragment
-        android:id="@+id/password_resetFragment"
-        android:name="com.example.offzmi.password_resetFragment"
-        android:label="password_resetFragment"
+        android:id="@+id/PasswordResetFragment"
+        android:name="com.example.offzmi.ui.PasswordResetFragment"
+        android:label="@string/pass_reset"
         tools:layout="@layout/fragment_password_reset"/>
+    <fragment
+        android:id="@+id/addFragment3"
+        android:name="com.example.offzmi.ui.AddFragment3"
+        android:label="AddFragment3" />
+    <fragment
+        android:id="@+id/addFragment2"
+        android:name="com.example.offzmi.ui.AddFragment2"
+        android:label="AddFragment2" />
 </navigation>

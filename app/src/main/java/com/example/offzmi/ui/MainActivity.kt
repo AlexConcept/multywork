@@ -1,4 +1,4 @@
-package com.example.offzmi
+package com.example.offzmi.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +7,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.offzmi.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -22,10 +23,10 @@ class MainActivity : AppCompatActivity() {
 
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.bottom_nav_publishesFragment,
-                R.id.bottom_nav_requestFragment,
-                R.id.bottom_nav_addFragment,
-                R.id.bottom_nav_profileFragment,
+                R.id.PublicationsFragment,
+                R.id.RequestFragment,
+                R.id.AddFragment,
+                R.id.ProfileFragment,
                 R.id.InfoFragment
             )
         )

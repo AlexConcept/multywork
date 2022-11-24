@@ -1,4 +1,4 @@
-package com.example.offzmi
+package com.example.offzmi.ui
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -6,25 +6,27 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.offzmi.viewmodel.BottomNavRequestViewModel
+import com.example.offzmi.R
 
-class add_3Fragment : Fragment() {
+class RequestFragment : Fragment() {
 
     companion object {
-        fun newInstance() = add_3Fragment()
+        fun newInstance() = RequestFragment()
     }
 
-    private lateinit var viewModel: Add3ViewModel
+    private lateinit var viewModel: BottomNavRequestViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_add_3, container, false)
+        return inflater.inflate(R.layout.fragment_bottom_nav_request, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(Add3ViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(BottomNavRequestViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

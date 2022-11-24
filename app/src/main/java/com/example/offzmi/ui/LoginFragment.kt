@@ -1,4 +1,4 @@
-package com.example.offzmi
+package com.example.offzmi.ui
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -6,11 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.offzmi.viewmodel.LoginViewModel
+import com.example.offzmi.R
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class loginFragment : Fragment() {
+class LoginFragment : Fragment() {
 
     companion object {
-        fun newInstance() = loginFragment()
+        fun newInstance() = LoginFragment()
     }
 
     private lateinit var viewModel: LoginViewModel
@@ -20,6 +23,13 @@ class loginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_login, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val view = requireActivity().findViewById<BottomNavigationView>(R.id.nav_view)
+        view.visibility = View.GONE
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
