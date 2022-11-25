@@ -75,4 +75,5 @@
     <string name="base_url">https:/www.offzmi.com</string>
     <string name="privacy_policy_url">https://offzmi.com/politika-konfidenciynosti.html</string>
     <string name="welcome">Ласкаво просимо до OFFЗМІ</string>
+    <string name="send">Відправити</string>
 </resources>
