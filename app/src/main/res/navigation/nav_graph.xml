@@ -9,27 +9,27 @@
         android:id="@+id/PublicationsFragment"
         android:name="com.example.offzmi.ui.PublicationsFragment"
         android:label="@string/text_label_publishes"
-        tools:layout="@layout/fragment_bottom_nav_publishes" />
+        tools:layout="@layout/fragment_publishes" />
     <fragment
         android:id="@+id/AddFragment"
         android:name="com.example.offzmi.ui.AddFragment"
         android:label="@string/label_add"
-        tools:layout="@layout/fragment_bottom_nav_add" />
+        tools:layout="@layout/fragment_add" />
     <fragment
         android:id="@+id/ProfileFragment"
         android:name="com.example.offzmi.ui.ProfileFragment"
         android:label="@string/text_label_profile"
-        tools:layout="@layout/fragment_bottom_nav_profile" />
+        tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/RequestFragment"
         android:name="com.example.offzmi.ui.RequestFragment"
         android:label="@string/label_request"
-        tools:layout="@layout/fragment_bottom_nav_request" />
+        tools:layout="@layout/fragment_request" />
     <fragment
         android:id="@+id/InfoFragment"
         android:name="com.example.offzmi.ui.InfoFragment"
         android:label="@string/text_label_info"
-        tools:layout="@layout/fragment_bottom_nav_info" />
+        tools:layout="@layout/fragment_info" />
     <fragment
         android:id="@+id/SignInFragment"
         android:name="com.example.offzmi.ui.SignInFragment"

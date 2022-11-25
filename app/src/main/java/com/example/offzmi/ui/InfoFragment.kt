@@ -7,15 +7,15 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.offzmi.R
-import com.example.offzmi.databinding.FragmentBottomNavInfoBinding
+import com.example.offzmi.databinding.FragmentInfoBinding
 import com.example.offzmi.utils.Utils.openWebPage
-import com.example.offzmi.viewmodel.BottomNavInfoViewModel
+import com.example.offzmi.viewmodel.InfoViewModel
 
 
 class InfoFragment : Fragment() {
 
-    private lateinit var viewModel: BottomNavInfoViewModel
-    private var _binding: FragmentBottomNavInfoBinding? = null
+    private lateinit var viewModel: InfoViewModel
+    private var _binding: FragmentInfoBinding? = null
 
     private val binding get() = _binding!!
 
@@ -23,7 +23,7 @@ class InfoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentBottomNavInfoBinding.inflate(inflater, container, false)
+        _binding = FragmentInfoBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
@@ -47,7 +47,7 @@ class InfoFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(BottomNavInfoViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(InfoViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
