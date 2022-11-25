@@ -4,6 +4,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     tools:context=".ui.InfoFragment">
 
+<data>
+    <variable
+        name="infoFragment"
+        type="com.example.offzmi.ui.InfoFragment" />
+</data>
+
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -24,6 +30,7 @@
         android:id="@+id/write_to_us"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="@{() -> infoFragment.writeToUs()}"
         android:text="@string/write_to_us"
         app:icon="@drawable/ic_baseline_edit_note_24"
         app:layout_constraintEnd_toEndOf="parent"

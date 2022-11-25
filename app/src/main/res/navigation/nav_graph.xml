@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/SignInFragment">
+    app:startDestination="@id/InfoFragment">
 
     <fragment
         android:id="@+id/PublicationsFragment"
@@ -29,7 +29,11 @@
         android:id="@+id/InfoFragment"
         android:name="com.example.offzmi.ui.InfoFragment"
         android:label="@string/text_label_info"
-        tools:layout="@layout/fragment_info" />
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_InfoFragment_to_WriteToUsFragment"
+            app:destination="@id/WriteToUsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/SignInFragment"
         android:name="com.example.offzmi.ui.SignInFragment"
@@ -51,11 +55,15 @@
         android:label="@string/pass_reset"
         tools:layout="@layout/fragment_password_reset"/>
     <fragment
-        android:id="@+id/addFragment3"
+        android:id="@+id/AddFragment3"
         android:name="com.example.offzmi.ui.AddFragment3"
         android:label="AddFragment3" />
     <fragment
-        android:id="@+id/addFragment2"
+        android:id="@+id/AddFragment2"
         android:name="com.example.offzmi.ui.AddFragment2"
         android:label="AddFragment2" />
+    <fragment
+        android:id="@+id/WriteToUsFragment"
+        android:name="com.example.offzmi.ui.WriteToUsFragment"
+        android:label="@string/write_to_us" />
 </navigation>

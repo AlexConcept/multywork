@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.offzmi.R
 import com.example.offzmi.databinding.FragmentInfoBinding
 import com.example.offzmi.utils.Utils.openWebPage
@@ -24,12 +25,16 @@ class InfoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentInfoBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
+        val root = binding.root
+        return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.apply {
+            infoFragment = this@InfoFragment
+        }
 
         binding.faqButton.setOnClickListener {
             openWebPage(
@@ -44,6 +49,10 @@ class InfoFragment : Fragment() {
             )
         }
     }
+
+ fun writeToUs () {
+     findNavController().navigate(R.id.action_InfoFragment_to_WriteToUsFragment)
+ }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
