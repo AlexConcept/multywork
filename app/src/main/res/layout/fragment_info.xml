@@ -2,12 +2,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    tools:context=".ui.InfoFragment">
+    tools:context=".presentation.fragments.InfoFragment">
 
 <data>
     <variable
         name="infoFragment"
-        type="com.example.offzmi.ui.InfoFragment" />
+        type="com.example.offzmi.presentation.fragments.InfoFragment" />
 </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout
