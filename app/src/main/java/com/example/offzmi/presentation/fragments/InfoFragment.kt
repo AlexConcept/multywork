@@ -38,7 +38,7 @@ class InfoFragment : Fragment() {
 
         binding.faqButton.setOnClickListener {
             openWebPage(
-                resources.getString(R.string.base_url),
+                resources.getString(R.string.website_url),
                 requireContext()
             )
         }

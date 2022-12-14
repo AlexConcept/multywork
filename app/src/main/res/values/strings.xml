@@ -72,8 +72,11 @@
     <string name="enter_the_home_number">Введіть номер будинку</string>
     <string name="publish">Опублікувати</string>
     <string name="add_photo">Додайте фото події</string>
-    <string name="base_url">https:/www.offzmi.com</string>
+    <string name="website_url">https:/www.offzmi.com</string>
     <string name="privacy_policy_url">https://offzmi.com/politika-konfidenciynosti.html</string>
     <string name="welcome">Ласкаво просимо до OFFЗМІ</string>
     <string name="send">Відправити</string>
+    <string name="read">Читати</string>
+    <string name="BASE_URL">https://api.airtable.com</string>
+    <string name="TOKEN">patLjaA9PpxNgSK6z.0131f87279f385a422f27dd6ae2a5062c23e471e8f8e171999731760a74dfbbe</string>
 </resources>

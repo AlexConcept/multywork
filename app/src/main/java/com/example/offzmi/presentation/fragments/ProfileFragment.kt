@@ -31,7 +31,7 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.goToSiteButton.setOnClickListener {
             openWebPage(
-                resources.getString(R.string.base_url),
+                resources.getString(R.string.website_url),
                 requireContext()
             )
         }

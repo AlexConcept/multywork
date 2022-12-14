@@ -1,4 +1,3 @@
 package com.example.offzmi.repository
 
-class AppRepository {
-}
+class AppRepository() {}
