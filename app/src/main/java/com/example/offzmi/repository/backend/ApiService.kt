@@ -10,7 +10,6 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.Query
 
 
@@ -40,11 +39,11 @@ class AccessTokenAuthenticator(val airtableApiToken: String) : Authenticator {
    .addHeader("Authorization", "Bearer $airtableApiToken")
    .build()
  }
+
+
+ fun Response.authenticatedWithSameToken(token: String): Boolean =
+  header("Authorization with same token", "")?.endsWith(token) ?: false
 }
-
-fun Response.authenticatedWithSameToken(token: String): Boolean =
- header("Authorization with same token", "")?.endsWith(token) ?: false
-
 
 private fun getRetrofitClient(authenticator: Authenticator? = null): OkHttpClient {
  return OkHttpClient.Builder()
@@ -77,22 +76,17 @@ interface ApiService {
   @Query("role") role: String,
  ): List<UserDto>
 
- object ApiObject {
-  val retrofitService: ApiService by lazy {
-   retrofit.create(ApiService::class.java)
-  }
- }
-
- @GET("")
- suspend fun getUserById(@Path("id") id: Int): UserDto
+ @GET("v0/appcFqmvhlbjJ23bU/Users/recocTGkklHkCXetE")
+ suspend fun getUserById(
+  @Query("id") id: Int,
+ ): UserDto
 }
 
-//@GET(" ")
-// suspend fun getPublications(): Single<Response<List<PublicationItemDto>>>
-//
-//@GET(" ")
-// suspend fun getPublicationById(@Path("id") id: Int): Single<PublicationItemDto>
-//}
+object ApiObject {
+ val retrofitService: ApiService by lazy {
+  retrofit.create(ApiService::class.java)
+ }
+}
 
 
 
