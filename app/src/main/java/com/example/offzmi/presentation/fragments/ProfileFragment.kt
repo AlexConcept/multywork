@@ -1,18 +1,17 @@
 package com.example.offzmi.presentation.fragments
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import com.example.offzmi.utils.Utils.openWebPage
 import android.view.ViewGroup
-import com.example.offzmi.domain.ProfileViewModel
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.offzmi.R
 import com.example.offzmi.databinding.FragmentProfileBinding
+import com.example.offzmi.domain.ProfileViewModel
+import com.example.offzmi.utils.Utils.openWebPage
 
 class ProfileFragment : Fragment() {
-
 
     private lateinit var viewModel: ProfileViewModel
     private var _binding: FragmentProfileBinding? = null

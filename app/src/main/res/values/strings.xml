@@ -60,7 +60,6 @@
     <string name="my_posts">Мої публікації</string>
     <string name="saved_posts">Збереженні публікації</string>
     <string name="go_to_the_site">Перейти на сайт додатку</string>
-    <string name="content">Контент</string>
     <string name="choose_category_description">Choose category</string>
     <string name="fab_category">Виберіть категорію новин</string>
     <string name="messages">Повідомлення</string>
@@ -73,7 +72,7 @@
     <string name="publish">Опублікувати</string>
     <string name="add_photo">Додайте фото події</string>
     <string name="website_url">https:/www.offzmi.com</string>
-    <string name="privacy_policy_url">https://offzmi.com/politika-konfidenciynosti.html</string>
+    <string name="privacy_policy_url">https://offzmi.com/politika-konfidenciynosti-html</string>
     <string name="welcome">Ласкаво просимо до OFFЗМІ</string>
     <string name="send">Відправити</string>
     <string name="read">Читати</string>

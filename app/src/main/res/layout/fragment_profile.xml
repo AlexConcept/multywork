@@ -4,35 +4,87 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_avatar"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/test_user"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/user_name"
+            app:layout_constraintEnd_toStartOf="@id/user_name"
+            app:layout_constraintTop_toTopOf="@id/user_name"
+            app:srcCompat="@drawable/ic_baseline_verified_user_24"
+            />
 
         <TextView
             android:id="@+id/user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
+            android:text="Антон Геращенко"
             android:textColor="@color/black"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="User Name" />
+            app:layout_constraintTop_toBottomOf="@id/user_avatar" />
+
+        <TextView
+            android:id="@+id/company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="ТСН"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_name" />
+
+        <TextView
+            android:id="@+id/position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Журналист"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/company" />
+
+        <RatingBar
+            android:id="@+id/rating"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/position" />
+
 
         <Button
             android:id="@+id/edit_profile_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="70dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="15dp"
             android:text="@string/edit_profile"
             android:textAllCaps="false"
             app:icon="@drawable/ic_baseline_co_present_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/user_name" />
+            app:layout_constraintTop_toBottomOf="@id/rating" />
 
         <TextView
             android:id="@+id/my_cabinet"
@@ -66,17 +118,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/likes_button" />
 
-        <TextView
-            android:id="@+id/content"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="20dp"
-            android:text="@string/content"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/direct_button" />
-
         <Button
             android:id="@+id/my_posts_button"
             android:layout_width="match_parent"
@@ -86,7 +127,7 @@
             app:icon="@drawable/ic_baseline_text_snippet_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/content" />
+            app:layout_constraintTop_toBottomOf="@id/direct_button" />
 
         <Button
             android:id="@+id/saved_posts_button"
@@ -109,6 +150,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/saved_posts_button" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="rating" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
