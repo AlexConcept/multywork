@@ -5,6 +5,7 @@ import com.example.offzmi.R
 import com.example.offzmi.repository.backend.models.UserDto
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import kotlinx.coroutines.flow.Flow
 import okhttp3.*
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -79,7 +80,7 @@ interface ApiService {
  @GET("v0/appcFqmvhlbjJ23bU/Users/recocTGkklHkCXetE")
  suspend fun getUserById(
   @Query("id") id: Int,
- ): UserDto
+ ): Flow<UserDto>
 }
 
 object ApiObject {
