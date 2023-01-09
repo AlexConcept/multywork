@@ -1,11 +1,12 @@
 package com.example.offzmi.repository.backend
 
-import com.example.offzmi.BuildConfig
-import com.example.offzmi.R
+import androidx.databinding.ktx.BuildConfig
+import androidx.lifecycle.MutableLiveData
 import com.example.offzmi.repository.backend.models.UserDto
+import com.example.offzmi.utils.Const.Companion.AIRTABLE_TOKEN
+import com.example.offzmi.utils.Const.Companion.BASE_URL
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
-import kotlinx.coroutines.flow.Flow
 import okhttp3.*
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -14,35 +15,29 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 
-private const val BASE_URL = "${R.string.BASE_URL}"
-private const val AIRTABLE_TOKEN = "${R.string.TOKEN}"
-
 private val moshi = Moshi.Builder()
  .add(KotlinJsonAdapterFactory())
  .build()
 
 val authenticator = AccessTokenAuthenticator(AIRTABLE_TOKEN)
+
 private val retrofit = Retrofit.Builder()
  .addConverterFactory(MoshiConverterFactory.create(moshi))
  .baseUrl(BASE_URL)
  .client(getRetrofitClient(authenticator))
  .build()
 
-
-class AccessTokenAuthenticator(val airtableApiToken: String) : Authenticator {
+class AccessTokenAuthenticator(private val airtableApiToken: String) : Authenticator {
  override fun authenticate(route: Route?, response: Response): Request? {
-
   if (response.authenticatedWithSameToken(airtableApiToken)) {
    return null
   }
-
   return response.request.newBuilder()
    .addHeader("Authorization", "Bearer $airtableApiToken")
    .build()
  }
 
-
- fun Response.authenticatedWithSameToken(token: String): Boolean =
+ private fun Response.authenticatedWithSameToken(token: String): Boolean =
   header("Authorization with same token", "")?.endsWith(token) ?: false
 }
 
@@ -80,19 +75,11 @@ interface ApiService {
  @GET("v0/appcFqmvhlbjJ23bU/Users/recocTGkklHkCXetE")
  suspend fun getUserById(
   @Query("id") id: Int,
- ): Flow<UserDto>
-}
+ ): MutableLiveData<UserDto>
 
-object ApiObject {
- val retrofitService: ApiService by lazy {
-  retrofit.create(ApiService::class.java)
+ object ApiObject {
+  val retrofitService: ApiService by lazy {
+   retrofit.create(ApiService::class.java)
+  }
  }
 }
-
-
-
-
-
-
-
-

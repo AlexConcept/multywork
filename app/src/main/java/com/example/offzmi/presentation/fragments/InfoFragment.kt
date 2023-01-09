@@ -5,17 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.offzmi.R
 import com.example.offzmi.databinding.FragmentInfoBinding
 import com.example.offzmi.utils.Utils.openWebPage
-import com.example.offzmi.domain.InfoViewModel
 
 
 class InfoFragment : Fragment() {
-
-    private lateinit var viewModel: InfoViewModel
     private var _binding: FragmentInfoBinding? = null
 
     private val binding get() = _binding!!
@@ -53,12 +49,6 @@ class InfoFragment : Fragment() {
  fun writeToUs () {
      findNavController().navigate(R.id.action_InfoFragment_to_WriteToUsFragment)
  }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(InfoViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()

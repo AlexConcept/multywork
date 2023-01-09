@@ -4,8 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
 import com.example.offzmi.R
 import com.example.offzmi.databinding.FragmentProfileBinding
 import com.example.offzmi.domain.ProfileViewModel
@@ -13,35 +14,34 @@ import com.example.offzmi.utils.Utils.openWebPage
 
 class ProfileFragment : Fragment() {
 
-    private lateinit var viewModel: ProfileViewModel
+    private val viewModel: ProfileViewModel by viewModels { ProfileViewModel.Factory }
     private var _binding: FragmentProfileBinding? = null
-
     private val binding get() = _binding!!
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewModel.userProfile.observe(
+            viewLifecycleOwner
+        ) { userDto ->
+            (userDto.firstName + " " + userDto.lastName).also { binding.userName.text = it }
+            binding.rating.rating = userDto.rating.toFloat()
+            binding.company.text = userDto.company
+            binding.position.text = userDto.position
+        }
+        binding.verificationIcon.isVisible = viewModel.verificationUser
         binding.goToSiteButton.setOnClickListener {
             openWebPage(
                 resources.getString(R.string.website_url),
                 requireContext()
             )
         }
-    binding.userName.text = "{$}"
     }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
-
 }

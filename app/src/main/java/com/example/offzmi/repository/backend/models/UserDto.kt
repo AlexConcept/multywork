@@ -12,5 +12,5 @@ data class UserDto(
     @Json(name = "position") val position: String,
     @Json(name = "rating") val rating: Int,
     @Json(name = "role") val role: String,
-    @Json(name = "verified") val verified: String
+    @Json(name = "verified") var verified: Boolean
 )
