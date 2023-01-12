@@ -1,7 +1,9 @@
 package com.example.offzmi.repository.backend.models
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
+@JsonClass (generateAdapter = true)
 data class UserDto(
 
     @Json(name = "avatar_base_64") val avatarBase64: String,

@@ -42,7 +42,7 @@ class ProfileViewModel(
 
     private fun getUser() {
         viewModelScope.launch {
-            _userProfile.value = repository.getUserProfile().value
+            _userProfile.value = repository.getUserProfile()
         }
     }
 

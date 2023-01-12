@@ -8,7 +8,7 @@ import retrofit2.HttpException
 
 class AppRepository( val service: ApiService) {
 
-   suspend fun getUserProfile(): MutableLiveData<UserDto> {
+   suspend fun getUserProfile(): UserDto {
        try {
            val userProfile = ApiService.ApiObject.retrofitService.getUserById(42)
            return   userProfile

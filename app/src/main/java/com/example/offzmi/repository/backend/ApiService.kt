@@ -3,8 +3,6 @@ package com.example.offzmi.repository.backend
 import androidx.databinding.ktx.BuildConfig
 import androidx.lifecycle.MutableLiveData
 import com.example.offzmi.repository.backend.models.UserDto
-import com.example.offzmi.utils.Const.Companion.AIRTABLE_TOKEN
-import com.example.offzmi.utils.Const.Companion.BASE_URL
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.*
@@ -19,11 +17,11 @@ private val moshi = Moshi.Builder()
  .add(KotlinJsonAdapterFactory())
  .build()
 
-val authenticator = AccessTokenAuthenticator(AIRTABLE_TOKEN)
+val authenticator = AccessTokenAuthenticator("patLjaA9PpxNgSK6z.0131f87279f385a422f27dd6ae2a5062c23e471e8f8e171999731760a74dfbbe")
 
 private val retrofit = Retrofit.Builder()
  .addConverterFactory(MoshiConverterFactory.create(moshi))
- .baseUrl(BASE_URL)
+ .baseUrl("https://api.airtable.com")
  .client(getRetrofitClient(authenticator))
  .build()
 
@@ -72,10 +70,10 @@ interface ApiService {
   @Query("role") role: String,
  ): List<UserDto>
 
- @GET("v0/appcFqmvhlbjJ23bU/Users/recocTGkklHkCXetE")
+ @GET("v0/appcFqmvhlbjJ23bU/Users/")
  suspend fun getUserById(
   @Query("id") id: Int,
- ): MutableLiveData<UserDto>
+ ): UserDto
 
  object ApiObject {
   val retrofitService: ApiService by lazy {
