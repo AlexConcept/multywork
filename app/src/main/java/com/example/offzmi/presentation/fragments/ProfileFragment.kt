@@ -31,10 +31,12 @@ class ProfileFragment : Fragment() {
         viewModel.userProfile.observe(
             viewLifecycleOwner
         ) { userDto ->
-            (userDto.firstName + " " + userDto.lastName).also { binding.userName.text = it }
-            binding.rating.rating = userDto.rating.toFloat()
-            binding.company.text = userDto.company
-            binding.position.text = userDto.position
+            (userDto.fields.firstName + " " + userDto.fields.lastName).also {
+                binding.userName.text = it
+            }
+            binding.rating.rating = userDto.fields.rating.toFloat()
+            binding.company.text = userDto.fields.company
+            binding.position.text = userDto.fields.position
         }
         binding.verificationIcon.isVisible = viewModel.verificationUser
         binding.goToSiteButton.setOnClickListener {

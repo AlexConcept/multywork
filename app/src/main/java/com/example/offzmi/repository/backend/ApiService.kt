@@ -1,10 +1,8 @@
 package com.example.offzmi.repository.backend
 
 import androidx.databinding.ktx.BuildConfig
-import androidx.lifecycle.MutableLiveData
+import com.example.offzmi.repository.backend.models.OldUserDto
 import com.example.offzmi.repository.backend.models.UserDto
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.*
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -12,16 +10,12 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-
-private val moshi = Moshi.Builder()
- .add(KotlinJsonAdapterFactory())
- .build()
-
-val authenticator = AccessTokenAuthenticator("patLjaA9PpxNgSK6z.0131f87279f385a422f27dd6ae2a5062c23e471e8f8e171999731760a74dfbbe")
+val authenticator =
+ AccessTokenAuthenticator("patLjaA9PpxNgSK6z.0131f87279f385a422f27dd6ae2a5062c23e471e8f8e171999731760a74dfbbe")
 
 private val retrofit = Retrofit.Builder()
- .addConverterFactory(MoshiConverterFactory.create(moshi))
  .baseUrl("https://api.airtable.com")
+ .addConverterFactory(MoshiConverterFactory.create())
  .client(getRetrofitClient(authenticator))
  .build()
 
@@ -68,11 +62,11 @@ interface ApiService {
   @Query("company") company: String,
   @Query("position") position: String,
   @Query("role") role: String,
- ): List<UserDto>
+ ): List<OldUserDto>
 
  @GET("v0/appcFqmvhlbjJ23bU/Users/")
  suspend fun getUserById(
-  @Query("id") id: Int,
+  @Query("id") id: String,
  ): UserDto
 
  object ApiObject {

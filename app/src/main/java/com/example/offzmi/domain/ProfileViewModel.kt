@@ -37,7 +37,7 @@ class ProfileViewModel(
 
     init {
         getUser()
-        getUserVerification()
+//        getUserVerification()
     }
 
     private fun getUser() {
@@ -46,11 +46,11 @@ class ProfileViewModel(
         }
     }
 
-    private fun getUserVerification() {
-        viewModelScope.launch {
-            if (_userProfile.value?.verified != false) {
-                _verificationUser = true
-            }
-        }
-    }
+//    private fun getUserVerification() {
+//        viewModelScope.launch {
+//            if (_userProfile.value?.fields.verified = true) {
+//                _verificationUser = true
+//            }
+//        }
+//    }
 }
