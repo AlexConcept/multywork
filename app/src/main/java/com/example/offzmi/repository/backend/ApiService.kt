@@ -1,6 +1,5 @@
 package com.example.offzmi.repository.backend
 
-import androidx.databinding.ktx.BuildConfig
 import com.example.offzmi.repository.backend.models.OldUserDto
 import com.example.offzmi.repository.backend.models.UserDto
 import okhttp3.*
@@ -9,6 +8,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
+
 
 val authenticator =
  AccessTokenAuthenticator("patLjaA9PpxNgSK6z.0131f87279f385a422f27dd6ae2a5062c23e471e8f8e171999731760a74dfbbe")
@@ -26,14 +26,16 @@ class AccessTokenAuthenticator(private val airtableApiToken: String) : Authentic
   }
   return response.request.newBuilder()
    .addHeader("Authorization", "Bearer $airtableApiToken")
+   .addHeader("Accept", "application/json")
    .build()
  }
 
  private fun Response.authenticatedWithSameToken(token: String): Boolean =
-  header("Authorization with same token", "")?.endsWith(token) ?: false
+  header("Authorization with same token", "")?.endsWith(token) ?: true
 }
 
 private fun getRetrofitClient(authenticator: Authenticator? = null): OkHttpClient {
+
  return OkHttpClient.Builder()
   .addInterceptor { chain ->
    chain.proceed(chain.request().newBuilder().also {
@@ -41,11 +43,9 @@ private fun getRetrofitClient(authenticator: Authenticator? = null): OkHttpClien
    }.build())
   }.also { client ->
    authenticator?.let { client.authenticator(it) }
-   if (BuildConfig.DEBUG) {
     val logging = HttpLoggingInterceptor()
     logging.setLevel(HttpLoggingInterceptor.Level.BODY)
     client.addInterceptor(logging)
-   }
   }.build()
 }
 
