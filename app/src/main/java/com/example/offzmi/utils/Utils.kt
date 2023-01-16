@@ -25,5 +25,6 @@ object Utils {
         if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.S_V2)
             Toast.makeText(context, "Текст було скопійовано до буфера обміну", LENGTH_SHORT).show()
     }
+
 }
 

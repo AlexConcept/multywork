@@ -1,7 +1,6 @@
 package com.example.offzmi.repository.backend
 
-import com.example.offzmi.repository.backend.models.OldUserDto
-import com.example.offzmi.repository.backend.models.UserDto
+import com.example.offzmi.repository.backend.models.UserResponse
 import okhttp3.*
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -62,12 +61,12 @@ interface ApiService {
   @Query("company") company: String,
   @Query("position") position: String,
   @Query("role") role: String,
- ): List<OldUserDto>
+ )
 
  @GET("v0/appcFqmvhlbjJ23bU/Users/")
  suspend fun getUserById(
   @Query("id") id: String,
- ): UserDto
+ ): UserResponse
 
  object ApiObject {
   val retrofitService: ApiService by lazy {

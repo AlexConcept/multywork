@@ -8,7 +8,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.offzmi.R
-import com.example.offzmi.repository.backend.models.PublicationItemDto
 
 //class PublishesAdapter(
 //    private val context: Context,

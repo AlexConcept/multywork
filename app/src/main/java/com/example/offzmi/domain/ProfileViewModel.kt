@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory.Companion.AP
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.offzmi.repository.AppRepository
-import com.example.offzmi.repository.backend.models.UserDto
+import com.example.offzmi.repository.backend.models.UserResponse
 import com.example.offzmi.utils.App
 import kotlinx.coroutines.launch
 
@@ -14,13 +14,9 @@ class ProfileViewModel(
     private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
-    private var _userProfile = MutableLiveData<UserDto>()
-    val userProfile: LiveData<UserDto>
+    private var _userProfile = MutableLiveData<UserResponse>()
+    val userProfile: LiveData<UserResponse>
         get() = _userProfile
-
-    private var _verificationUser: Boolean = false
-    val verificationUser: Boolean
-        get() = _verificationUser
 
     companion object {
         val Factory: ViewModelProvider.Factory = viewModelFactory {
@@ -37,7 +33,6 @@ class ProfileViewModel(
 
     init {
         getUser()
-//        getUserVerification()
     }
 
     private fun getUser() {
@@ -45,12 +40,4 @@ class ProfileViewModel(
             _userProfile.value = repository.getUserProfile()
         }
     }
-
-//    private fun getUserVerification() {
-//        viewModelScope.launch {
-//            if (_userProfile.value?.fields.verified = true) {
-//                _verificationUser = true
-//            }
-//        }
-//    }
 }
