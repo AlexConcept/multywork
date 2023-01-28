@@ -7,7 +7,7 @@
 <data>
     <variable
         name="infoFragment"
-        type="com.example.offzmi.presentation.fragments.InfoFragment" />
+        type="com.example.multywork.presentation.fragments.InfoFragment" />
 </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout

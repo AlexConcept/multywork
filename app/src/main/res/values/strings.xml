@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">OffZmi</string>
+    <string name="app_name">MultyWork</string>
     <string name="sign_in_question">Чи маєте ви ID запрошення?</string>
     <string name="to_start_button">Розпочати</string>
     <string name="logo_description">Off zmi</string>
@@ -78,4 +78,9 @@
     <string name="read">Читати</string>
     <string name="BASE_URL">https://api.airtable.com</string>
     <string name="TOKEN">patLjaA9PpxNgSK6z.0131f87279f385a422f27dd6ae2a5062c23e471e8f8e171999731760a74dfbbe</string>
+    <string name="want_to_cre">Want to create\nsome wonderful in our  multiverse?</string>
+    <string name="welcome_ilo">Welcome, Ilon</string>
+    <string name="to_create_a">To create\na grand\nproject</string>
+    <string name="be_a_part_o">Be a part\nof grand\nproject</string>
+    <string name="i_light_the">I light\nthe stars\nin the sky</string>
 </resources>

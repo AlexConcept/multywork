@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="want_to_cre">
+        <item name="android:textSize">
+            20sp
+        </item>
+        <item name="android:letterSpacing">0
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+    <style name="welcome_ilo">
+        <item name="android:textSize">
+            18sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+    <style name="to_create_a">
+        <item name="android:textSize">
+            18sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0
+        </item>
+
+        <item name="android:textColor">
+            #4ED9EC
+        </item>
+
+    </style>
+
+    <style name="be_a_part_o">
+        <item name="android:textSize">
+            18sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0
+        </item>
+
+        <item name="android:textColor">
+            #FD4979
+        </item>
+    </style>
+
+    <style name="i_light_the">
+        <item name="android:textSize">
+            18sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0
+        </item>
+
+        <item name="android:textColor">
+            #FEB700
+        </item>
+
+    </style>
+</resources>
