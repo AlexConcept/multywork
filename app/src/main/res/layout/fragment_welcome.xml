@@ -1,109 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background_1">
+    tools:context=".presentation.fragments.WelcomeFragment">
 
-    <TextView
-        android:id="@+id/welcome_ilo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/poppins_medium"
-        android:gravity="top"
-        android:text="@string/welcome_ilo"
-        android:textAppearance="@style/welcome_ilo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
 
-    <TextView
-        android:id="@+id/want_to_cre"
-        android:layout_width="350dp"
-        android:layout_height="90dp"
-        android:layout_marginTop="18dp"
-        android:fontFamily="@font/poppins_bold"
-        android:gravity="center_horizontal|top"
-        android:text="@string/want_to_cre"
-        android:textAppearance="@style/want_to_cre"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/welcome_ilo" />
+        <variable
+            name="welcomeFragment"
+            type="com.example.multywork.presentation.fragments.WelcomeFragment" />
 
-    <TextView
-        android:id="@+id/to_create_a"
-        android:layout_width="104dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="81.83dp"
-        android:fontFamily="@font/poppins_bold"
-        android:gravity="center_horizontal|top"
-        android:text="@string/to_create_a"
-        android:textAppearance="@style/to_create_a"
-        app:layout_constraintStart_toStartOf="@id/want_to_cre"
-        app:layout_constraintTop_toBottomOf="@id/want_to_cre" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_1">
+
+        <TextView
+            android:id="@+id/welcome_ilo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="top"
+            android:text="@string/welcome_ilo"
+            android:textAppearance="@style/welcome_ilo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/want_to_cre"
+            android:layout_width="350dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="34dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center_horizontal|top"
+            android:text="@string/want_to_cre"
+            android:textAppearance="@style/want_to_cre"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/welcome_ilo" />
+
+        <TextView
+            android:id="@+id/to_create_a"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="81.83dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center_horizontal|top"
+            android:text="@string/to_create_a"
+            android:textAppearance="@style/to_create_a"
+            app:layout_constraintStart_toStartOf="@id/want_to_cre"
+            app:layout_constraintTop_toBottomOf="@id/want_to_cre" />
 
 
-    <ImageButton
-        android:id="@+id/planet_1"
-        android:layout_width="240dp"
-        android:layout_height="240dp"
-        android:layout_marginStart="7.01dp"
-        android:layout_marginTop="2.33dp"
-        android:layout_marginEnd="34dp"
-        android:background="@color/trans"
-        android:scaleType="centerInside"
-        android:src="@drawable/planet_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/to_create_a"
-        app:layout_constraintTop_toBottomOf="@id/want_to_cre" />
+        <ImageButton
+            android:id="@+id/planet_1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="4dp"
+            android:background="@color/trans"
+            android:scaleType="centerCrop"
+            android:onClick="@{() -> welcomeFragment.navigateToSettings()}"
+            android:src="@drawable/planet_1"
+            app:layout_constraintEnd_toEndOf="@id/want_to_cre"
+            app:layout_constraintTop_toBottomOf="@id/want_to_cre" />
 
-    <TextView
-        android:id="@+id/be_a_part_o"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60.33dp"
-        android:fontFamily="@font/poppins_bold"
-        android:gravity="center_horizontal|top"
-        android:text="@string/be_a_part_o"
-        android:textAppearance="@style/be_a_part_o"
-        app:layout_constraintEnd_toEndOf="@id/planet_1"
-        app:layout_constraintTop_toBottomOf="@id/planet_1" />
+        <TextView
+            android:id="@+id/be_a_part_o"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="12dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center_horizontal|top"
+            android:text="@string/be_a_part_o"
+            android:textAppearance="@style/be_a_part_o"
+            app:layout_constraintEnd_toEndOf="@id/want_to_cre"
+            app:layout_constraintTop_toBottomOf="@id/planet_1" />
 
-    <ImageButton
-        android:id="@+id/planet_2"
-        android:layout_width="216dp"
-        android:layout_height="207.33dp"
-        android:layout_marginTop="2.33dp"
-        android:background="@color/trans"
-        android:src="@drawable/planet_2"
-        app:layout_constraintStart_toStartOf="@id/to_create_a"
-        app:layout_constraintTop_toBottomOf="@id/planet_1" />
+        <ImageButton
+            android:id="@+id/planet_2"
+            android:layout_width="193dp"
+            android:layout_height="148dp"
+            android:background="@color/trans"
+            android:scaleType="centerCrop"
+            android:src="@drawable/planet_2"
+            app:layout_constraintStart_toStartOf="@id/to_create_a"
+            app:layout_constraintTop_toBottomOf="@id/planet_1" />
 
-    <TextView
-        android:id="@+id/i_light_the"
-        android:layout_width="104dp"
-        android:layout_height="89dp"
-        android:layout_marginTop="72.33dp"
-        android:layout_marginBottom="94dp"
-        android:fontFamily="@font/poppins_bold"
-        android:gravity="center_horizontal|top"
-        android:text="@string/i_light_the"
-        android:textAppearance="@style/i_light_the"
-        app:layout_constraintStart_toStartOf="@id/planet_2"
-        app:layout_constraintTop_toBottomOf="@id/planet_2" />
+        <TextView
+            android:id="@+id/i_light_the"
+            android:layout_width="104dp"
+            android:layout_height="89dp"
+            android:layout_marginTop="40dp"
 
-    <ImageButton
-        android:id="@+id/planet_3"
-        android:layout_width="232.12dp"
-        android:layout_height="228.13dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="2.33dp"
-        android:background="@color/trans"
-        android:src="@drawable/planet_3"
-        app:layout_constraintEnd_toEndOf="@id/be_a_part_o"
-        app:layout_constraintStart_toEndOf="@id/i_light_the"
-        app:layout_constraintTop_toBottomOf="@id/planet_2" />
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center_horizontal|top"
+            android:text="@string/i_light_the"
+            android:textAppearance="@style/i_light_the"
+            app:layout_constraintStart_toStartOf="@id/planet_2"
+            app:layout_constraintTop_toBottomOf="@id/planet_2" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:layout_width="184dp"
+            android:layout_height="151dp"
+            android:background="@color/trans"
+            android:scaleType="centerCrop"
+            android:src="@drawable/planet_3"
+            app:layout_constraintEnd_toEndOf="@id/be_a_part_o"
+            app:layout_constraintTop_toBottomOf="@id/planet_2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

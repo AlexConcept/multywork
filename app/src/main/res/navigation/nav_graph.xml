@@ -69,5 +69,13 @@
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.example.multywork.presentation.fragments.WelcomeFragment"
-        android:label="WelcomeFragment" />
+        android:label="WelcomeFragment" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_settingsSkills"
+            app:destination="@id/settingsSkills" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsSkills"
+        android:name="com.example.multywork.presentation.fragments.SettingsSkills"
+        android:label="SettingsSkills" />
 </navigation>

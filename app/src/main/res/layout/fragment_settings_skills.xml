@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_2">
+
+
+    <TextView
+        android:id="@+id/welcome_ilo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="top"
+        android:text="@string/welcome_ilo"
+        android:textAppearance="@style/welcome_ilo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/great_"
+        android:layout_width="351dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center_horizontal|bottom"
+        android:text="@string/great_"
+        android:textAppearance="@style/great_"
+        app:layout_constraintEnd_toEndOf="@id/welcome_ilo"
+        app:layout_constraintStart_toStartOf="@id/welcome_ilo"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_ilo" />
+
+    <TextView
+        android:id="@+id/choose_empl"
+        android:layout_width="351dp"
+        android:layout_height="54dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center_horizontal|bottom"
+        android:text="@string/choose_empl"
+        android:textAppearance="@style/choose_empl"
+        app:layout_constraintEnd_toEndOf="@id/great_"
+        app:layout_constraintStart_toStartOf="@id/great_"
+        app:layout_constraintTop_toBottomOf="@+id/great_" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/design_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/d_design"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toStartOf="@id/choose_empl"
+        app:layout_constraintTop_toBottomOf="@id/choose_empl" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/stats_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_5"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/statisctics_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toEndOf="@id/design_btn"
+        app:layout_constraintTop_toBottomOf="@id/choose_empl" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/motion_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_11"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/motion_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toEndOf="@id/stats_btn"
+        app:layout_constraintTop_toBottomOf="@id/choose_empl" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/pm_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_19"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/project_manager_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintEnd_toEndOf="@+id/choose_empl"
+        app:layout_constraintStart_toEndOf="@id/motion_btn"
+        app:layout_constraintTop_toBottomOf="@id/choose_empl" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/photo_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_1"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/photo_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toStartOf="@id/design_btn"
+        app:layout_constraintTop_toBottomOf="@id/design_btn" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/web_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_1_3"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="1dp"
+        android:text="@string/web_development_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toEndOf="@id/design_btn"
+        app:layout_constraintTop_toBottomOf="@id/stats_btn" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/comp_arch_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_12"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="1dp"
+        android:text="@string/computer_architect_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toEndOf="@id/stats_btn"
+        app:layout_constraintTop_toBottomOf="@id/motion_btn" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/graph_design_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_20"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/graphic_design_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintEnd_toEndOf="@id/pm_btn"
+        app:layout_constraintTop_toBottomOf="@id/pm_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/prod_man_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_2"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/prod_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toStartOf="@id/design_btn"
+        app:layout_constraintTop_toBottomOf="@id/photo_btn" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/team_lead_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/union"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/team_leading_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toEndOf="@id/design_btn"
+        app:layout_constraintTop_toBottomOf="@id/web_btn" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/data_clean_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_13"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/data_cleaning_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toEndOf="@id/stats_btn"
+        app:layout_constraintTop_toBottomOf="@id/comp_arch_btn" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dubbing_act_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_21"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/dubbing_actor_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintEnd_toEndOf="@id/pm_btn"
+        app:layout_constraintStart_toEndOf="@id/motion_btn"
+        app:layout_constraintTop_toBottomOf="@id/graph_design_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/market_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_3"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/prod_mark_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toStartOf="@id/design_btn"
+        app:layout_constraintTop_toBottomOf="@id/prod_man_btn" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/email_mark_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_6"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/email_market_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toEndOf="@id/design_btn"
+        app:layout_constraintTop_toBottomOf="@id/team_lead_btn" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/text_draw_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_14"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/texture_drawing_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toEndOf="@id/stats_btn"
+        app:layout_constraintTop_toBottomOf="@id/data_clean_btn" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/data_analytics_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_22"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/data_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintEnd_toEndOf="@id/pm_btn"
+        app:layout_constraintStart_toEndOf="@id/motion_btn"
+        app:layout_constraintTop_toBottomOf="@id/dubbing_act_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/copywriter_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/copywriting_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toStartOf="@id/design_btn"
+        app:layout_constraintTop_toBottomOf="@id/market_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/brand_man_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_7"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/brand_manager_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toEndOf="@id/design_btn"
+        app:layout_constraintTop_toBottomOf="@id/email_mark_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/qa_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_15"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/qa_engineering_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toEndOf="@id/stats_btn"
+        app:layout_constraintTop_toBottomOf="@id/text_draw_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/art_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_23"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/art_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintEnd_toEndOf="@id/pm_btn"
+        app:layout_constraintStart_toEndOf="@id/motion_btn"
+        app:layout_constraintTop_toBottomOf="@id/data_analytics_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/content_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_4"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/content_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toStartOf="@id/design_btn"
+        app:layout_constraintTop_toBottomOf="@id/copywriter_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/marketing_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_8"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/market_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toEndOf="@id/design_btn"
+        app:layout_constraintTop_toBottomOf="@id/brand_man_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/fin_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_16"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/finance_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toEndOf="@id/stats_btn"
+        app:layout_constraintTop_toBottomOf="@id/qa_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/software_develop_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_24"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/software_developer_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintEnd_toEndOf="@id/pm_btn"
+        app:layout_constraintStart_toEndOf="@id/motion_btn"
+        app:layout_constraintTop_toBottomOf="@id/art_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ui_design_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_1_1"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/ui_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toStartOf="@id/design_btn"
+        app:layout_constraintTop_toBottomOf="@id/content_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/targeting_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_9"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/target_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toEndOf="@id/design_btn"
+        app:layout_constraintTop_toBottomOf="@id/marketing_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/video_making_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_17"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/video_make_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toEndOf="@id/stats_btn"
+        app:layout_constraintTop_toBottomOf="@id/fin_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/data_science_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_25"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/data_scie_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintEnd_toEndOf="@id/pm_btn"
+        app:layout_constraintStart_toEndOf="@id/motion_btn"
+        app:layout_constraintTop_toBottomOf="@id/software_develop_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/management_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/group_47"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/management_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toStartOf="@id/design_btn"
+        app:layout_constraintTop_toBottomOf="@id/ui_design_btn" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/smm_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_10"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/smm_btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toEndOf="@id/design_btn"
+        app:layout_constraintTop_toBottomOf="@id/targeting_btn" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/math_btn"
+        android:layout_width="83.4dp"
+        android:layout_height="52.95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_btn"
+        android:drawableTop="@drawable/vector_18"
+        android:gravity="center_horizontal|bottom"
+        android:paddingTop="8dp"
+        android:text="@string/d_design"
+        android:textAllCaps="false"
+        android:textAppearance="@style/d_design"
+        app:layout_constraintStart_toEndOf="@id/stats_btn"
+        app:layout_constraintTop_toBottomOf="@id/video_making_btn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
