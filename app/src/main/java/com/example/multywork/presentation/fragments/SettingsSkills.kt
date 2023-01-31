@@ -2,6 +2,7 @@ package com.example.multywork.presentation.fragments
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.transition.TransitionInflater
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,11 +13,13 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class SettingsSkills : Fragment() {
 
-    companion object {
-        fun newInstance() = SettingsSkills()
-    }
-
     private lateinit var viewModel: SettingsSkillsViewModel
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val inflater = TransitionInflater.from(requireContext())
+        enterTransition = inflater.inflateTransition(R.transition.slide_right)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
