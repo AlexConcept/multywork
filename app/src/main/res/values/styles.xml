@@ -5,8 +5,11 @@
         <item name="android:textSize">
             20sp
         </item>
-        <item name="android:letterSpacing">0
+
+        <item name="android:letterSpacing">
+            0
         </item>
+
         <item name="android:textColor">
             #FFFFFF
         </item>
@@ -113,6 +116,41 @@
         <item name="fontFamily">
             @font/poppins
         </item>
+    </style>
+
+    <style name="next_btn">
+        <item name="android:textSize">
+            18sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0
+        </item>
+
+        <item name="android:textColor">
+            #BFFFFFFF
+        </item>
+
+        <item name="fontFamily">
+            @font/poppins_semibold
+        </item>
+        <item name="lineHeight">
+            27sp
+        </item>
+    </style>
+
+    <style name="placeholder_style">
+        <item name="android:textSize">
+            16sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0
+        </item>
+        <item name="fontFamily">
+            @font/poppins
+        </item>
+
     </style>
 
 

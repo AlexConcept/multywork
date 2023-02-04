@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.multywork.R
-import com.example.multywork.domain.SettingsSkillsViewModel
+import com.example.multywork.presentation.viewmodels.SettingsSkillsViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class SettingsSkills : Fragment() {

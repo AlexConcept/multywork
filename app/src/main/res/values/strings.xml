@@ -116,5 +116,15 @@
     <string name="smm_btn">SMM</string>
     <string name="copywriting_btn">Copywriting</string>
     <string name="project_manager_btn">Project Manager</string>
+    <string name="add_some_in">Add some information\nabout your project</string>
+    <string name="name">Name</string>
+    <string name="type">Type</string>
+    <string name="budget">Budget</string>
+    <string name="description">Description</string>
+    <string name="next">Next</string>
+    <string name="well_done">Well done!</string>
+    <string name="and_finally">And finally!</string>
+    <string name="add_project_cover_and_nlinks_to_social_media">Add project cover and\nlinks to social media</string>
+    <string name="choose_a_photo">Choose a photo</string>
 
 </resources>

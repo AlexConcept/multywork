@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.multywork.R
-import com.example.multywork.presentation.WriteToUsViewModel
+import com.example.multywork.presentation.viewmodels.WriteToUsViewModel
 
 class WriteToUsFragment : Fragment() {
 

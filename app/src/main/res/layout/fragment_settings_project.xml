@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_2">
+
+
+    <TextView
+        android:id="@+id/welcome_ilo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="top"
+        android:text="@string/welcome_ilo"
+        android:textAppearance="@style/welcome_ilo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/great_"
+        android:layout_width="351dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center_horizontal|bottom"
+        android:text="@string/well_done"
+        android:textAppearance="@style/great_"
+        app:layout_constraintEnd_toEndOf="@id/welcome_ilo"
+        app:layout_constraintStart_toStartOf="@id/welcome_ilo"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_ilo" />
+
+    <TextView
+        android:id="@+id/choose_project"
+        android:layout_width="351dp"
+        android:layout_height="54dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center_horizontal|bottom"
+        android:text="@string/add_some_in"
+        android:textAppearance="@style/choose_empl"
+        app:layout_constraintEnd_toEndOf="@id/great_"
+        app:layout_constraintStart_toStartOf="@id/great_"
+        app:layout_constraintTop_toBottomOf="@+id/great_" />
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/enter_the_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/name"
+        android:textColorHint="#BFFFFFFF"
+        app:hintTextAppearance="@style/placeholder_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/choose_project">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enter_the_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_placeholder"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/enter_the_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/type"
+        android:textColorHint="#BFFFFFFF"
+        app:hintTextAppearance="@style/placeholder_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enter_the_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enter_the_type_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_placeholder"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/enter_the_budget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/budget"
+        android:textColorHint="#BFFFFFFF"
+        app:hintTextAppearance="@style/placeholder_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enter_the_type">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enter_the_id_budget_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_placeholder"
+            android:inputType="numberSigned" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/enter_the_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="33dp"
+        android:hint="@string/description"
+        android:textColorHint="#BFFFFFFF"
+        app:hintTextAppearance="@style/placeholder_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enter_the_budget">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enter_the_id_description_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="196dp"
+            android:background="@drawable/background_placeholder"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="33dp"
+        android:background="@drawable/backround_next_btn"
+        android:text="@string/next"
+        android:textAllCaps="true"
+        android:textAppearance="@style/next_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enter_the_description" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

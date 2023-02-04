@@ -5,13 +5,12 @@ import android.os.Bundle
 import android.transition.TransitionInflater
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.SurfaceControl.Transaction
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.multywork.R
 import com.example.multywork.databinding.FragmentWelcomeBinding
-import com.example.multywork.domain.WelcomeViewModel
+import com.example.multywork.presentation.viewmodels.WelcomeViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class WelcomeFragment : Fragment() {

@@ -8,9 +8,8 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.multywork.databinding.FragmentProfileBinding
-import com.example.multywork.domain.ProfileViewModel
+import com.example.multywork.presentation.viewmodels.ProfileViewModel
 import com.example.multywork.utils.Utils.openWebPage
-import java.util.*
 
 
 class ProfileFragment : Fragment() {
@@ -31,13 +30,13 @@ class ProfileFragment : Fragment() {
         viewModel.userProfile.observe(
             viewLifecycleOwner
         ) { userProfile ->
-            (userProfile.records[0].fields.firstName + " " + userProfile.records[0].fields.lastName).also {
+            (userProfile.firstName + " " + userProfile.lastName).also {
                 binding.userName.text = it
             }
-            binding.rating.rating = userProfile.records[0].fields.rating.toFloat()
-            binding.company.text = userProfile.records[0].fields.company
-            binding.position.text = userProfile.records[0].fields.position
-            binding.verificationIcon.isVisible = userProfile.records[0].fields.verified.toBoolean()
+            binding.rating.rating = userProfile.rating.toFloat()
+            binding.company.text = userProfile.company
+            binding.position.text = userProfile.position
+            binding.verificationIcon.isVisible = userProfile.verified.toBoolean()
         }
         binding.goToSiteButton.setOnClickListener {
             openWebPage(

@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.multywork.domain.Add2ViewModel
+import com.example.multywork.presentation.viewmodels.Add2ViewModel
 import com.example.multywork.R
 
 class AddFragment2 : Fragment() {

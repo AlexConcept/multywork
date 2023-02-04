@@ -1,10 +1,18 @@
 package com.example.multywork.utils
 
-import com.example.multywork.repository.AppRepository
-import com.example.multywork.repository.backend.ApiService
+import com.example.data.AppRepositoryImpl
+import com.example.data.backend.ApiService
+import com.example.domain.repository.AppRepository
+import com.example.domain.usecases.GetUserProfileUseCase
 
 class AppContainer {
 
     private val service = ApiService.ApiObject.retrofitService
-    val userRepository = AppRepository(service)
+    val userRepositoryImpl = AppRepositoryImpl(service)
+
+    private val appRepository =
+    val getUserProfileUseCase = GetUserProfileUseCase(appRepository)
+
 }
+
+

@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.multywork.R
-import com.example.multywork.domain.AddViewModel
+import com.example.multywork.presentation.viewmodels.AddViewModel
 
 class AddFragment : Fragment() {
 

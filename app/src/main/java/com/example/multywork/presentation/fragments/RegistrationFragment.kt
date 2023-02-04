@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import com.example.multywork.R
 import com.example.multywork.databinding.FragmentRegistrationBinding
 import com.example.multywork.utils.Utils.openWebPage
-import com.example.multywork.domain.RegistrationViewModel
+import com.example.multywork.presentation.viewmodels.RegistrationViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class RegistrationFragment : Fragment() {
