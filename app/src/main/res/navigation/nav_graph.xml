@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/PublicationsFragment">
+    app:startDestination="@id/welcomeFragment">
 
     <fragment
         android:id="@+id/PublicationsFragment"
@@ -77,5 +77,25 @@
     <fragment
         android:id="@+id/settingsSkills"
         android:name="com.example.multywork.presentation.fragments.SettingsSkills"
-        android:label="SettingsSkills" />
+        android:label="SettingsSkills" >
+        <action
+            android:id="@+id/action_settingsSkills_to_settingsProjectFragment"
+            app:destination="@id/settingsProjectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsProjectFragment"
+        android:name="com.example.multywork.presentation.fragments.SettingsProjectFragment"
+        android:label="SettingsProjectFragment" >
+        <action
+            android:id="@+id/action_settingsProjectFragment_to_settingsCoverFragment"
+            app:destination="@id/settingsCoverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsCoverFragment"
+        android:name="com.example.multywork.presentation.fragments.SettingsCoverFragment"
+        android:label="SettingsCoverFragment" >
+        <action
+            android:id="@+id/action_settingsCoverFragment_to_PublicationsFragment"
+            app:destination="@id/PublicationsFragment" />
+    </fragment>
 </navigation>

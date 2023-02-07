@@ -551,6 +551,7 @@
         app:layout_constraintTop_toBottomOf="@id/video_making_btn" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="33dp"

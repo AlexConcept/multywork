@@ -6,15 +6,21 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import com.example.multywork.databinding.FragmentProfileBinding
 import com.example.multywork.presentation.viewmodels.ProfileViewModel
+import com.example.multywork.presentation.viewmodels.ProfileViewModelFactory
+import com.example.multywork.utils.App
 import com.example.multywork.utils.Utils.openWebPage
+import javax.inject.Inject
 
 
 class ProfileFragment : Fragment() {
 
-    private val viewModel: ProfileViewModel by viewModels { ProfileViewModel.Factory }
+    @Inject
+    lateinit var viewModelFactory: ProfileViewModelFactory
+
+    private lateinit var viewModel: ProfileViewModel
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
@@ -27,6 +33,8 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity?.applicationContext as App).appComponent.inject(this)
+        viewModel = ViewModelProvider(this, viewModelFactory).get(ProfileViewModel::class.java)
         viewModel.userProfile.observe(
             viewLifecycleOwner
         ) { userProfile ->

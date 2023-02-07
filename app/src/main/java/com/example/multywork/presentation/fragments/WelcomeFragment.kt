@@ -1,12 +1,12 @@
 package com.example.multywork.presentation.fragments
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.transition.TransitionInflater
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.multywork.R
 import com.example.multywork.databinding.FragmentWelcomeBinding
