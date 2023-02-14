@@ -5,6 +5,7 @@ import android.transition.TransitionInflater
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -22,7 +23,6 @@ class WelcomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         val inflater = TransitionInflater.from(requireContext())
         exitTransition = inflater.inflateTransition(R.transition.fade)
     }
@@ -31,10 +31,11 @@ class WelcomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
+        val activity = activity as AppCompatActivity
+        activity.supportActionBar?.setDisplayHomeAsUpEnabled(false)
         _binding = FragmentWelcomeBinding.inflate(inflater, container, false)
         val root = binding.root
         return root
-
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -55,4 +56,6 @@ class WelcomeFragment : Fragment() {
     fun navigateToSettings() {
         findNavController().navigate(R.id.action_welcomeFragment_to_settingsSkills)
     }
+
+
 }

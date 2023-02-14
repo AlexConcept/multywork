@@ -1,6 +1,8 @@
 package com.example.data.backend
 
+import com.example.data.backend.models.SkillResponse
 import com.example.data.backend.models.UserResponse
+import com.example.repository.R
 import okhttp3.*
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -10,7 +12,7 @@ import retrofit2.http.Query
 
 
 val authenticator =
- AccessTokenAuthenticator("patLjaA9PpxNgSK6z.0131f87279f385a422f27dd6ae2a5062c23e471e8f8e171999731760a74dfbbe")
+ AccessTokenAuthenticator("patoBqwV7bD2LmqcO.ccab139b63e5284fe678696862d7909803bd6ca763ecc89db6c9d2bb4121e45a")
 
 private val retrofit = Retrofit.Builder()
  .baseUrl("https://api.airtable.com")
@@ -63,14 +65,17 @@ interface ApiService {
   @Query("role") role: String,
  )
 
+ @GET("/v0/app4aX6ktUiVTBfP9/Skills/")
+ suspend fun getSkillById(
+  @Query("id") id: String,
+ ): SkillResponse
+
  @GET("v0/appcFqmvhlbjJ23bU/Users/")
  suspend fun getUserById(
   @Query("id") id: String,
  ): UserResponse
 
  object ApiObject {
-  val retrofitService: ApiService by lazy {
-   retrofit.create(ApiService::class.java)
-  }
+  val retrofitService: ApiService = retrofit.create(ApiService::class.java)
  }
 }

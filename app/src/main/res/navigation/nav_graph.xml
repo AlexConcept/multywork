@@ -76,7 +76,7 @@
     </fragment>
     <fragment
         android:id="@+id/settingsSkills"
-        android:name="com.example.multywork.presentation.fragments.SettingsSkills"
+        android:name="com.example.multywork.presentation.fragments.SettingsSkillsFragment"
         android:label="SettingsSkills" >
         <action
             android:id="@+id/action_settingsSkills_to_settingsProjectFragment"

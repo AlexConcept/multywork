@@ -2,7 +2,7 @@ package com.example.data.backend.models
 
 import com.squareup.moshi.Json
 
-data class Fields(
+data class UserFields(
     @Json(name = "avatar_base_64") val avatarBase64: String,
     @Json(name = "company") val company: String,
     @Json(name = "first_name") val firstName: String,

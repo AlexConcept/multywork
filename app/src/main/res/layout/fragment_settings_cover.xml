@@ -10,7 +10,7 @@
         android:id="@+id/welcome_ilo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="64dp"
         android:fontFamily="@font/poppins_medium"
         android:gravity="top"
         android:text="@string/welcome_ilo"

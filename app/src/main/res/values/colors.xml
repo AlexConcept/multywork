@@ -8,4 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="trans">#00FFFFFF</color>
+    <color name="trans_25">#40000000</color>
+    <color name="status_bar_color">#0F101F</color>
 </resources>

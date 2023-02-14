@@ -13,18 +13,6 @@ class ProfileViewModel(
     val userProfile: LiveData<UserProfile>
         get() = _userProfile
 
-//        val Factory: ViewModelProvider.Factory = viewModelFactory {
-//            initializer {
-//                val savedStateHandle = createSavedStateHandle()
-//                val getUserProfileUseCase =
-//                (this[APPLICATION_KEY] as App).appContainer.getUserProfileUseCase
-//                ProfileViewModel(
-//                    getUserProfileUseCase = getUserProfileUseCase,
-//                    savedStateHandle = savedStateHandle
-//                )
-//            }
-//        }
-//    }
 init {
     getUser()
 }
