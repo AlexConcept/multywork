@@ -3,7 +3,6 @@ package com.example.data
 
 import android.os.RemoteException
 import com.example.data.backend.ApiService
-import com.example.data.backend.models.SkillResponse
 import com.example.data.backend.models.UserResponse
 import com.example.domain.entity.Skill
 import com.example.domain.entity.UserProfile
@@ -34,20 +33,19 @@ class AppRepositoryImpl(private val service: ApiService) : AppRepository {
         )
     }
 
-    override suspend fun getSkill(): Skill {
+    override suspend fun getSkills(): List<Skill> {
         try {
-            val skill = ApiService.ApiObject.retrofitService.getSkillById("recvRNBJUM40t89tI")
-            return skillMapToDomain(skill)
+            val skill = ApiService.ApiObject.retrofitService.getSkills()
+
+            return skill.records.map { record ->
+                Skill(
+                    id = record.fields.id,
+                    skillName = record.fields.skillName,
+                    skillIconBase64 = record.fields.skillIconBase64
+                )
+            }
         } catch (ex: HttpException) {
             throw RemoteException(ex.message ?: "Skill request error!!!")
         }
-    }
-
-    private fun skillMapToDomain(skill: SkillResponse): Skill {
-        return Skill(
-            id = skill.records[0].skillFields.id,
-            skillIconBase64 = skill.records[0].skillFields.skillIconBase64,
-            skillName = skill.records[0].skillFields.skillName,
-        )
     }
 }

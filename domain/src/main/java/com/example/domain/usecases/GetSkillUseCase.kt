@@ -3,9 +3,9 @@ package com.example.domain.usecases
 import com.example.domain.entity.Skill
 import com.example.domain.repository.AppRepository
 
-class GetSkillUseCase(private val appRepository: AppRepository) {
+class GetSkillById(private val appRepository: AppRepository) {
 
-    suspend fun execute(): Skill {
-        return appRepository.getSkill()
+    suspend fun execute(): Set<Skill> {
+        return appRepository.getSkills().toSet()
     }
 }

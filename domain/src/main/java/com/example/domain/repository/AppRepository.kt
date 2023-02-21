@@ -8,5 +8,5 @@ interface AppRepository {
 
     suspend fun getUserProfile(): UserProfile
 
-    suspend fun getSkill(): Skill
+    suspend fun getSkills(): List<Skill>
 }

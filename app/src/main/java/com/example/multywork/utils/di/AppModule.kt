@@ -1,7 +1,7 @@
 package com.example.multywork.utils.di
 
 import android.content.Context
-import com.example.domain.usecases.GetSkillUseCase
+import com.example.domain.usecases.GetSkillById
 import com.example.domain.usecases.GetUserProfileUseCase
 import com.example.multywork.presentation.viewmodels.ProfileViewModelFactory
 import com.example.multywork.presentation.viewmodels.SettingsSkillsViewModelFactory
@@ -22,8 +22,7 @@ class AppModule(val  context: Context) {
     }
 
     @Provides
-    fun provideSettingsSkillsViewModelFactory(getSkillUseCase: GetSkillUseCase): SettingsSkillsViewModelFactory {
-        return SettingsSkillsViewModelFactory(getSkillUseCase = getSkillUseCase)
+    fun provideSettingsSkillsViewModelFactory(getSkillById: GetSkillById): SettingsSkillsViewModelFactory {
+        return SettingsSkillsViewModelFactory(getSkillById = getSkillById)
     }
-
 }

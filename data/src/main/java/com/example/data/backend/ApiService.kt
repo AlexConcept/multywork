@@ -2,7 +2,6 @@ package com.example.data.backend
 
 import com.example.data.backend.models.SkillResponse
 import com.example.data.backend.models.UserResponse
-import com.example.repository.R
 import okhttp3.*
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -52,23 +51,8 @@ private fun getRetrofitClient(authenticator: Authenticator? = null): OkHttpClien
 
 interface ApiService {
 
- @GET("/v0/appcFqmvhlbjJ23bU/Users?maxRecords=3&view=Grid%20view")
- suspend fun getUsers(
-  @Query("id") id: Int,
-  @Query("firstName") firstName: String,
-  @Query("lastName") lastName: String,
-  @Query("rating") rating: Int,
-  @Query("verified") verified: String,
-  @Query("avatarBase64") avatarBase64: String,
-  @Query("company") company: String,
-  @Query("position") position: String,
-  @Query("role") role: String,
- )
-
- @GET("/v0/app4aX6ktUiVTBfP9/Skills/")
- suspend fun getSkillById(
-  @Query("id") id: String,
- ): SkillResponse
+ @GET("/v0/app4aX6ktUiVTBfP9/Skills?maxRecords=31&view=Grid%20view")
+ suspend fun getSkills(): SkillResponse
 
  @GET("v0/appcFqmvhlbjJ23bU/Users/")
  suspend fun getUserById(

@@ -4,6 +4,6 @@ import com.squareup.moshi.Json
 
 data class SkillDto(
     @Json(name = "createdTime") val createdTime: String,
-    @Json(name = "userFields") val skillFields: SkillFields,
+    @Json(name = "fields") val fields: SkillFields,
     @Json(name = "id") val id: String,
 )

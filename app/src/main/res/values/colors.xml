@@ -10,4 +10,5 @@
     <color name="trans">#00FFFFFF</color>
     <color name="trans_25">#40000000</color>
     <color name="status_bar_color">#0F101F</color>
+    <color name="pick_a_skill_btn">#008496</color>
 </resources>
